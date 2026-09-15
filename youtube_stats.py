@@ -6,8 +6,11 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import re
 import sys
+import urllib.parse
+import urllib.request
 import webbrowser
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone, timedelta
@@ -80,20 +83,46 @@ def fetch_video_stats(video_id: str) -> dict:
     }
 
 
+def fetch_video_stats_api(video_ids: list[str], api_key: str) -> dict[str, dict]:
+    stats_map: dict[str, dict] = {}
+    for i in range(0, len(video_ids), 50):
+        chunk = video_ids[i : i + 50]
+        params = urllib.parse.urlencode(
+            {"part": "statistics", "id": ",".join(chunk), "key": api_key}
+        )
+        url = f"https://www.googleapis.com/youtube/v3/videos?{params}"
+        with urllib.request.urlopen(url, timeout=30) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        for item in data.get("items") or []:
+            stats = item.get("statistics") or {}
+            stats_map[item["id"]] = {
+                "id": item["id"],
+                "like_count": int(stats["likeCount"]) if "likeCount" in stats else 0,
+                "view_count": int(stats["viewCount"]) if "viewCount" in stats else 0,
+                "comment_count": int(stats["commentCount"]) if "commentCount" in stats else 0,
+            }
+    return stats_map
+
+
 def collect_rows(playlist: dict, workers: int = 6) -> list[dict]:
     entries = [e for e in (playlist.get("entries") or []) if e and e.get("id")]
+    api_key = os.environ.get("YOUTUBE_API_KEY", "").strip()
     stats_map: dict[str, dict] = {}
-    with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = {pool.submit(fetch_video_stats, e["id"]): e["id"] for e in entries}
-        done = 0
-        for future in as_completed(futures):
-            video_id = futures[future]
-            try:
-                stats_map[video_id] = future.result()
-            except Exception as exc:
-                stats_map[video_id] = {"id": video_id, "error": str(exc)}
-            done += 1
-            print(f"  讀取進度 {done}/{len(entries)}", flush=True)
+    if api_key:
+        print("使用 YouTube Data API 讀取按讚數")
+        stats_map = fetch_video_stats_api([e["id"] for e in entries], api_key)
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            futures = {pool.submit(fetch_video_stats, e["id"]): e["id"] for e in entries}
+            done = 0
+            for future in as_completed(futures):
+                video_id = futures[future]
+                try:
+                    stats_map[video_id] = future.result()
+                except Exception as exc:
+                    stats_map[video_id] = {"id": video_id, "error": str(exc)}
+                done += 1
+                print(f"  讀取進度 {done}/{len(entries)}", flush=True)
 
     rows = []
     for index, entry in enumerate(entries, start=1):
@@ -113,12 +142,17 @@ def collect_rows(playlist: dict, workers: int = 6) -> list[dict]:
                 "like_count": likes if isinstance(likes, int) else 0,
                 "view_count": views if isinstance(views, int) else 0,
                 "comment_count": comments if isinstance(comments, int) else 0,
+                "stats_ok": isinstance(likes, int),
             }
         )
+
+    if not any(row["stats_ok"] for row in rows):
+        raise RuntimeError("無法取得按讚數（可能被 YouTube 擋下），已中止以免覆蓋舊資料")
 
     rows.sort(key=lambda r: (-r["like_count"], r["group_no"]))
     for rank, row in enumerate(rows, start=1):
         row["rank"] = rank
+        row.pop("stats_ok", None)
     return rows
 
 
@@ -154,7 +188,7 @@ def save_outputs(playlist: dict, rows: list[dict], fetched_at: str) -> dict[str,
         )
         writer.writeheader()
         for row in rows:
-            writer.writerow({k: row[k] for k in writer.fieldnames})
+            writer.writerow({k: row[k] for k in writer.fieldnames if k in row})
 
     html_path.write_text(render_dashboard(payload), encoding="utf-8")
 
@@ -298,7 +332,7 @@ def render_dashboard(payload: dict) -> str:
         {''.join(rows_html)}
       </tbody>
     </table>
-    <p class="meta" style="margin-top:24px">網頁由 GitHub Pages 部署，每小時自動更新按讚數。</p>
+    <p class="meta" style="margin-top:24px">網頁由 GitHub Pages 部署。本機更新後推送即可刷新；若已設定 YouTube API Key，GitHub Actions 會每小時自動更新。</p>
   </main>
   <script>
     const q = document.getElementById('q');
