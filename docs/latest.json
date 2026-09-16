@@ -3,10 +3,10 @@
   "playlist_title": "【2026一中舞極限街舞大賽】青少組-初賽影片",
   "channel": "一中商圈 Yizhong Shopping District",
   "playlist_url": "https://www.youtube.com/playlist?list=PLJJ9XaApGghM",
-  "fetched_at": "2026-09-16 13:03:25",
+  "fetched_at": "2026-09-16 18:04:51",
   "team_count": 28,
-  "total_likes": 5746,
-  "total_views": 31124,
+  "total_likes": 6308,
+  "total_views": 31478,
   "teams": [
     {
       "playlist_index": 6,
@@ -16,7 +16,7 @@
       "video_id": "qgK7oO0KxZo",
       "url": "https://www.youtube.com/watch?v=qgK7oO0KxZo",
       "like_count": 769,
-      "view_count": 2524,
+      "view_count": 2531,
       "comment_count": 11,
       "rank": 1
     },
@@ -27,8 +27,8 @@
       "title": "【2026一中舞極限街舞大賽】青少組 第27組—《PinkyLuv》",
       "video_id": "Q6l-_cvdzxI",
       "url": "https://www.youtube.com/watch?v=Q6l-_cvdzxI",
-      "like_count": 562,
-      "view_count": 2594,
+      "like_count": 568,
+      "view_count": 2599,
       "comment_count": 15,
       "rank": 2
     },
@@ -40,7 +40,7 @@
       "video_id": "Wofl1wKnI7M",
       "url": "https://www.youtube.com/watch?v=Wofl1wKnI7M",
       "like_count": 555,
-      "view_count": 2437,
+      "view_count": 2456,
       "comment_count": 23,
       "rank": 3
     },
@@ -51,10 +51,34 @@
       "title": "【2026一中舞極限街舞大賽】青少組 第21組—《TBC Starry Crew》",
       "video_id": "BLz94yNNY-s",
       "url": "https://www.youtube.com/watch?v=BLz94yNNY-s",
-      "like_count": 496,
-      "view_count": 2278,
+      "like_count": 498,
+      "view_count": 2305,
       "comment_count": 10,
       "rank": 4
+    },
+    {
+      "playlist_index": 7,
+      "group_no": 7,
+      "team": "YVIE GIRLS",
+      "title": "【2026一中舞極限街舞大賽】青少組 第7組—《YVIE GIRLS》",
+      "video_id": "ANIAiBhZefM",
+      "url": "https://www.youtube.com/watch?v=ANIAiBhZefM",
+      "like_count": 477,
+      "view_count": 1218,
+      "comment_count": 21,
+      "rank": 5
+    },
+    {
+      "playlist_index": 25,
+      "group_no": 25,
+      "team": "JBB",
+      "title": "【2026一中舞極限街舞大賽】青少組 第25組—《JBB》",
+      "video_id": "e4EN_WDdCP0",
+      "url": "https://www.youtube.com/watch?v=e4EN_WDdCP0",
+      "like_count": 396,
+      "view_count": 983,
+      "comment_count": 4,
+      "rank": 6
     },
     {
       "playlist_index": 2,
@@ -63,10 +87,10 @@
       "title": "【2026一中舞極限街舞大賽】青少組 第2組—《G DIVA》",
       "video_id": "UI00QmOXFRU",
       "url": "https://www.youtube.com/watch?v=UI00QmOXFRU",
-      "like_count": 385,
-      "view_count": 3064,
+      "like_count": 386,
+      "view_count": 3084,
       "comment_count": 3,
-      "rank": 5
+      "rank": 7
     },
     {
       "playlist_index": 13,
@@ -75,10 +99,10 @@
       "title": "【2026一中舞極限街舞大賽】青少組 第13組—《Viyah Ditto》",
       "video_id": "FF8uLiX2P0U",
       "url": "https://www.youtube.com/watch?v=FF8uLiX2P0U",
-      "like_count": 352,
-      "view_count": 1699,
+      "like_count": 353,
+      "view_count": 1703,
       "comment_count": 18,
-      "rank": 6
+      "rank": 8
     },
     {
       "playlist_index": 12,
@@ -87,10 +111,10 @@
       "title": "【2026一中舞極限街舞大賽】青少組 第12組—《BADDIES》",
       "video_id": "XeQqkS8SiSc",
       "url": "https://www.youtube.com/watch?v=XeQqkS8SiSc",
-      "like_count": 306,
-      "view_count": 1445,
+      "like_count": 313,
+      "view_count": 1536,
       "comment_count": 7,
-      "rank": 7
+      "rank": 9
     },
     {
       "playlist_index": 23,
@@ -99,10 +123,10 @@
       "title": "【2026一中舞極限街舞大賽】青少組 第23組—《Pink Pump》",
       "video_id": "jSqPD8X0728",
       "url": "https://www.youtube.com/watch?v=jSqPD8X0728",
-      "like_count": 302,
-      "view_count": 1487,
-      "comment_count": 13,
-      "rank": 8
+      "like_count": 308,
+      "view_count": 1536,
+      "comment_count": 14,
+      "rank": 10
     },
     {
       "playlist_index": 4,
@@ -111,10 +135,10 @@
       "title": "【2026一中舞極限街舞大賽】青少組 第4組—《So chu》",
       "video_id": "0O-nAt1_LPw",
       "url": "https://www.youtube.com/watch?v=0O-nAt1_LPw",
-      "like_count": 216,
-      "view_count": 1156,
+      "like_count": 218,
+      "view_count": 1164,
       "comment_count": 25,
-      "rank": 9
+      "rank": 11
     },
     {
       "playlist_index": 22,
@@ -124,9 +148,9 @@
       "video_id": "aPDsSh3QdJc",
       "url": "https://www.youtube.com/watch?v=aPDsSh3QdJc",
       "like_count": 198,
-      "view_count": 907,
+      "view_count": 916,
       "comment_count": 5,
-      "rank": 10
+      "rank": 12
     },
     {
       "playlist_index": 1,
@@ -136,32 +160,8 @@
       "video_id": "x7dCjRWyWHY",
       "url": "https://www.youtube.com/watch?v=x7dCjRWyWHY",
       "like_count": 182,
-      "view_count": 1414,
+      "view_count": 1418,
       "comment_count": 0,
-      "rank": 11
-    },
-    {
-      "playlist_index": 7,
-      "group_no": 7,
-      "team": "YVIE GIRLS",
-      "title": "【2026一中舞極限街舞大賽】青少組 第7組—《YVIE GIRLS》",
-      "video_id": "ANIAiBhZefM",
-      "url": "https://www.youtube.com/watch?v=ANIAiBhZefM",
-      "like_count": 176,
-      "view_count": 1165,
-      "comment_count": 20,
-      "rank": 12
-    },
-    {
-      "playlist_index": 25,
-      "group_no": 25,
-      "team": "JBB",
-      "title": "【2026一中舞極限街舞大賽】青少組 第25組—《JBB》",
-      "video_id": "e4EN_WDdCP0",
-      "url": "https://www.youtube.com/watch?v=e4EN_WDdCP0",
-      "like_count": 167,
-      "view_count": 975,
-      "comment_count": 4,
       "rank": 13
     },
     {
@@ -172,7 +172,7 @@
       "video_id": "YyOqIm0Nr9c",
       "url": "https://www.youtube.com/watch?v=YyOqIm0Nr9c",
       "like_count": 149,
-      "view_count": 891,
+      "view_count": 894,
       "comment_count": 1,
       "rank": 14
     },
@@ -183,8 +183,8 @@
       "title": "【2026一中舞極限街舞大賽】青少組 第11組—《Future Feet》",
       "video_id": "gZLoZ-GPe4I",
       "url": "https://www.youtube.com/watch?v=gZLoZ-GPe4I",
-      "like_count": 137,
-      "view_count": 631,
+      "like_count": 142,
+      "view_count": 635,
       "comment_count": 8,
       "rank": 15
     },
@@ -207,8 +207,8 @@
       "title": "【2026一中舞極限街舞大賽】青少組 第26組—《S.K.J》",
       "video_id": "1t9IafYZQSA",
       "url": "https://www.youtube.com/watch?v=1t9IafYZQSA",
-      "like_count": 131,
-      "view_count": 1077,
+      "like_count": 133,
+      "view_count": 1091,
       "comment_count": 2,
       "rank": 17
     },
@@ -220,7 +220,7 @@
       "video_id": "M-80yvLy8EI",
       "url": "https://www.youtube.com/watch?v=M-80yvLy8EI",
       "like_count": 102,
-      "view_count": 793,
+      "view_count": 800,
       "comment_count": 5,
       "rank": 18
     },
@@ -244,7 +244,7 @@
       "video_id": "LYmPKMYPP10",
       "url": "https://www.youtube.com/watch?v=LYmPKMYPP10",
       "like_count": 86,
-      "view_count": 875,
+      "view_count": 876,
       "comment_count": 0,
       "rank": 20
     },
@@ -256,7 +256,7 @@
       "video_id": "sSpYbLRnUD0",
       "url": "https://www.youtube.com/watch?v=sSpYbLRnUD0",
       "like_count": 78,
-      "view_count": 542,
+      "view_count": 550,
       "comment_count": 4,
       "rank": 21
     },
@@ -268,7 +268,7 @@
       "video_id": "5xHurKEzjHA",
       "url": "https://www.youtube.com/watch?v=5xHurKEzjHA",
       "like_count": 44,
-      "view_count": 385,
+      "view_count": 386,
       "comment_count": 0,
       "rank": 22
     },
@@ -280,7 +280,7 @@
       "video_id": "3YRHIoQL6BM",
       "url": "https://www.youtube.com/watch?v=3YRHIoQL6BM",
       "like_count": 35,
-      "view_count": 290,
+      "view_count": 295,
       "comment_count": 0,
       "rank": 23
     },
@@ -292,7 +292,7 @@
       "video_id": "wBgfwg45qIA",
       "url": "https://www.youtube.com/watch?v=wBgfwg45qIA",
       "like_count": 30,
-      "view_count": 318,
+      "view_count": 319,
       "comment_count": 1,
       "rank": 24
     },
@@ -304,7 +304,7 @@
       "video_id": "ZqZnXUfUt9U",
       "url": "https://www.youtube.com/watch?v=ZqZnXUfUt9U",
       "like_count": 28,
-      "view_count": 267,
+      "view_count": 270,
       "comment_count": 0,
       "rank": 25
     },
@@ -316,7 +316,7 @@
       "video_id": "TEWGBoz7M5U",
       "url": "https://www.youtube.com/watch?v=TEWGBoz7M5U",
       "like_count": 21,
-      "view_count": 249,
+      "view_count": 251,
       "comment_count": 0,
       "rank": 26
     },
@@ -340,7 +340,7 @@
       "video_id": "0JD5AYuVJ38",
       "url": "https://www.youtube.com/watch?v=0JD5AYuVJ38",
       "like_count": 1,
-      "view_count": 179,
+      "view_count": 180,
       "comment_count": 0,
       "rank": 28
     }
